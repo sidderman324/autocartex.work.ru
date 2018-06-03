@@ -1,0 +1,144 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/promo.less';
+
+
+.promo {
+	display: inline-block;
+	height: 790px;
+	background-image: url('/img/promo_bgr_airsound.png');
+	padding: 70px 0;
+	box-shadow: 0px 14px 20px 2px rgba(0, 0, 0, 0.2);
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		height: 100%;
+	}
+
+	&--bottom {
+		background-image: url('/img/promo_bgr_airsound_bottom.png');
+		height: 600px;
+	}
+	&--down {
+		background-image: url('/img/offer_bgr.png');
+		height: 600px;
+		padding: 30px 0;
+		margin-bottom: 50px;
+
+		.container {
+			justify-content: center;
+		}
+	}
+
+	&__box {
+		width: 50%;
+		padding: 0 20px;
+	}
+	&__img-wrapper {
+		position: relative;
+		width: 530px;
+		height: 380px;
+		display: inline-block;
+		margin: 20px 0;
+	}
+	&__img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	&__title {
+		font-size: 46px;
+		color: rgb(241, 255, 253);
+		line-height: 1.2;
+		text-align: center;
+		width: 100%;
+
+		&--small {
+			font-size: 38px;
+			color: #fff;
+			font-weight: 500;
+			text-align: center;
+		}
+
+		span {
+			color: @bright-green-color;
+		}
+	}
+
+	&__list {
+		padding: 30px;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 1px;
+			width: 100%;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__item {
+		font-size: 18px;
+		color: rgb(252, 254, 254);
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 20px;
+		position: relative;
+		list-style-type: none;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: -7px;
+			left: -35px;
+			width: 30px;
+			height: 30px;
+			background-image: url('/img/icon_check.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	&__video-wrapper {
+		margin-top: 30px;
+		width: 50%;
+	}
+	&__video {
+		position: relative;
+		border: 3px solid rgba(255,255,255,.7);
+		width: 480px;
+		height: 310px;
+		overflow: hidden;
+	}
+	&__video-img {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&__video-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	&__info-icon {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 50%;
+	}
+
+}

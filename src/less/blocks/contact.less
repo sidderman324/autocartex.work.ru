@@ -1,0 +1,114 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/contact.less';
+
+
+.contact {
+	padding: 40px 0;
+	margin-top: 50px;
+	height: 555px;
+	background-image: url('/img/contact_bgr.png');
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__title {
+		font-size: 38px;
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		font-weight: 500;
+	}
+	&__block {
+		width: 50%;
+		padding-top: 40px;
+	}
+	&__item {
+		padding-left: 80px;
+		position: relative;
+		margin-bottom: 40px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			top: 15px;
+		}
+
+		&--phone:before {
+			background-image: url('/img/icon_phone_bw.png');
+		}
+		&--address:before {
+			background-image: url('/img/icon_place_bw.png');
+		}
+	}
+	&__phone {
+		font-size: 38px;
+		color: #fff;
+		width: 100%;
+		font-weight: 400;
+		margin-bottom: 5px;
+		width: 100%;
+		display: inline-block;
+		text-decoration: none;
+	}
+	&__address {
+		font-size: 28px;
+		color: #fff;
+		font-weight: 400;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__form-title {
+		font-size: 38px;
+		color: #fff;
+		text-align: center;
+	}
+	&__form-text {
+		font-size: 28px;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__input {
+		background-color: #fff;
+		outline: none;
+		height: 45px;
+		width: 414px;
+		display: inline-block;
+		margin-bottom: 10px;
+		padding-left: 10px;
+		font-size: 16px;
+		line-height: 30px;
+		border: 0;
+		border: 1px solid @black-color;
+		border-radius: 5px;
+
+		&--big {
+			height: 90px;
+		}
+	}
+	&__btn {
+		width: 218px;
+		height: 45px;
+		color: #fff;
+		border: 0;
+		background-color: @green-color;
+		border-radius: 5px;
+		font-size: 18px;
+		font-weight: 400;
+		margin-left: auto;
+		margin-top: 40px;
+		margin-right: 90px;
+	}
+
+}

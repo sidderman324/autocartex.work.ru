@@ -186,7 +186,8 @@ gulp.task('js', function () {
       // список обрабатываемых файлов
       dirs.source + '/js/jquery-3.1.1.js',
       dirs.source + '/js/jquery-migrate-1.4.1.min.js',
-      dirs.source + '/js/jquery.maskedinput.min.js',
+      dirs.source + '/js/input.mask.bundle.min.js',
+      dirs.source + '/js/slick.js',
       dirs.source + '/js/script.js',
       ])
   .pipe(plumber({ errorHandler: onError }))

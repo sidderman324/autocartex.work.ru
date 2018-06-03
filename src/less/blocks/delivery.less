@@ -1,0 +1,110 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/delivery.less';
+
+
+.delivery {
+	padding: 60px 0;
+
+	&__block {
+		padding: 50px 100px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__img {
+		margin-right: 100px;
+	}
+	&__billit-text {
+		font-size: 21px;
+		font-weight: 500;
+		position: relative;
+		padding-left: 80px;
+		margin-bottom: 60px;
+
+		&--normal {
+			font-weight: 400;
+			padding-left: 0;
+			font-size: 16px;
+		}
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 65px;
+			height: 65px;
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: 0;
+			top: -10px;
+		}
+		&--delivery-bw:before {
+			background-image: url('/img/icon_delivery_bw.png');
+		}
+		&--payment-bw:before {
+			background-image: url('/img/icon_payment_bw.png');
+		}
+	}
+	&__subtitle {
+		font-size: 30px;
+		color: @green-color;
+		font-weight: 500;
+		text-align: center;
+		width: 100%;
+
+		&--left {
+			width: 50%;
+		}
+	}
+	&__icon-wrapper {
+		width: 50%;
+	}
+	&__types {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 50px 0;
+		margin-bottom: 50px;
+		position: relative;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 100%;
+			height: 30px;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) -220%, rgba(0, 0, 0, 0) 100%);
+			bottom: -30px;
+			left: 0;
+			position: absolute;
+		}		
+	}
+	&__billit-title {
+		font-size: 21px;
+		color: @black-color;
+		font-weight: 500;
+		margin-bottom: 10px;
+		position: relative;
+		padding-left: 80px;
+		margin-bottom: 30px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 65px;
+			height: 65px;
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: 0;
+			top: 0;
+		}
+		&--credit:before {
+			background-image: url('/img/icon_credit_card_bw.png');
+		}
+		&--payment-bw:before {
+			background-image: url('/img/icon_payment_bw.png');
+		}
+		&--post:before {
+			background-image: url('/img/icon_payment_post_bw.png');
+		}
+	}
+
+}

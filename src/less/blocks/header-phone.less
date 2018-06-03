@@ -1,0 +1,39 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/header-phone.less';
+
+
+.header-phone {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__item {
+		font-size: 27.5px;
+		color: rgb(18, 25, 24);
+		line-height: 1.667;
+		text-align: left;
+		text-decoration: none;
+		position: relative;
+		padding-left: 55px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			background-image: url('/img/icon_phone.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+	&__text {
+		font-size: 21.389px;
+		color: rgb(59, 206, 124);
+		text-decoration: none;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+}

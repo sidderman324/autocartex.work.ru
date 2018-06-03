@@ -1,0 +1,150 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/card-item.less';
+
+
+.card-item {
+	display: flex;
+	flex-direction: row;
+	padding: 30px 0;
+	border-top: 1px solid @gray-color;
+
+	&__gallery {
+		width: 405px;
+		height: 350px;
+		margin: 0 115px;
+		display: inline-block;
+		// overflow: hidden;
+		// position: relative;
+	}
+	&__gallery-item {
+		width: 400px;
+		height: 340px;
+		display: inline-block;
+	}
+	.slick-arrow {
+		font-size: 0;
+		background-color: transparent;
+		border: 0;
+		
+		display: inline-block;
+		width: 30px;
+		height: 58px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+	}
+	.slick-next {
+		background-image: url('/img/icon_arrow_gallery_next.png');
+		right: -50px;
+	}
+	.slick-prev {
+		background-image: url('/img/icon_arrow_gallery.png');
+		left: -50px;
+	}
+	.slick-prev:before, .slick-next:before {
+		display: none;
+	}
+	.slick-dots li.slick-active button:before {
+		width: 15px;
+		height: 15px;
+		background-color: @green-color;
+		border-radius: 50%;
+		color: @green-color;
+		opacity: 1;
+	}
+	.slick-dots li button:before {
+		width: 15px;
+		height: 15px;
+		background-color: @gray-color;
+		border-radius: 50%;
+		color: @gray-color;
+		opacity: 1;
+	}
+	.slick-dots {
+		bottom: -25px;
+	}
+	&__info {
+		width: 50%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	&__title {
+		font-size: 30px;
+		color: @green-color;
+		font-weight: 500;
+		margin-right: auto;
+		text-transform: uppercase;
+	}
+	&__short-description {
+		font-size: 16px;
+		color: @black-color;
+		font-weight: 500;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted @gray-color;
+		display: block;
+		width: 100%;
+	}
+	&__description {
+		font-size: 14px;
+		color: @gray-color;
+	}
+	&__list {
+		padding-left: 18px;
+	}
+	&__features {
+		font-size: 14px;
+		color: @black-color;
+		width: 150px;
+		display: inline-block;
+		font-weight: 500;
+
+		&:first-of-type {
+			margin-left: -10px;
+		}
+		&:last-of-type {
+			width: 200px;
+		}
+	}
+	&__gift-img-wrapper {
+		width: 150px;
+		height: 150px;
+		position: relative;
+		margin-left: auto;
+	}
+	&__gift-img {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&__price {
+		width: 30%;
+		color: @green-color;
+		font-size: 27px;
+		font-weight: 400;
+	}
+	&__price-item {
+		font-size: 36px;
+		color: @green-color;
+		font-weight: 600;
+	}
+	&__buy-btn {
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		background-color: @bright-green-color;
+		height: 40px;
+		line-height: 39px;
+		text-align: center;
+		padding: 0 30px;
+		border-radius: 5px;
+		font-size: 22px;
+		margin-left: 40px;
+	}
+
+}

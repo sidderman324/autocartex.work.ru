@@ -19,24 +19,24 @@
 				</a>
 
 				<div class="header-phone">
-					<a href="#" class="header-phone__item">8(800)500-62-57</a>
-					<a href="#" class="header-phone__text">Заказать звонок</a>
+					<a href="tel:+78005006257" class="header-phone__item">8(800)500-62-57</a>
+					<a href="#promo_top" class="header-phone__text">Заказать звонок</a>
 				</div>
 			</div>
 			<div class="page-header__box">
 				<ul class="main-menu">
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Главная</a></li>
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Каталог</a></li>
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Зачем нужны</a></li>
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Преимущества</a></li>
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Отзывы</a></li>
-					<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка</a></li>
+					<li class="main-menu__item"><a href="/" class="main-menu__link">Главная</a></li>
+					<li class="main-menu__item"><a href="#catalog" class="main-menu__link">Каталог</a></li>
+					<li class="main-menu__item"><a href="#why_need" class="main-menu__link">Зачем нужны</a></li>
+					<li class="main-menu__item"><a href="#infographic" class="main-menu__link">Преимущества</a></li>
+					<li class="main-menu__item"><a href="#review" class="main-menu__link">Отзывы</a></li>
+					<li class="main-menu__item"><a href="#delivery" class="main-menu__link">Доставка</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 
-	<section class="promo">
+	<section class="promo" id="promo_top">
 		<div class="container">
 			<div class="promo__box">
 				<p class="promo__title">Беспроводные колонки от <span>1 190 руб!</span></p>
@@ -65,9 +65,10 @@
 					<p class="gift-offer__text gift-offer__text--bold"><span class="gift-offer__text--big">+ПОДАРОК!</span><br> Зарядное устройство <span class="gift-offer__text--big">Remax Mini</span></p>
 				</div>
 
-				<form action="" class="gift-offer__form">
-					<input type="text" class="gift-offer__input" placeholder="Ваше имя">
-					<input type="text" class="gift-offer__input" placeholder="Ваш номер телефона">
+				<form action="/php/send_request.php" method="POST" class="gift-offer__form">
+					<input type="text" name="yourName" class="gift-offer__input" placeholder="Ваше имя">
+					<input type="tel" name="phoneNumber" class="gift-offer__input phoneMask" placeholder="Ваш номер телефона">
+					<input type="hidden" name="sourceForm" value="Верхний разворот">
 					<input type="submit" class="gift-offer__submit" value="Купить JBL Charge 3">
 				</form>
 			</div>
@@ -107,7 +108,7 @@
 		</div>
 	</section>
 
-	<section class="catalog">
+	<section class="catalog" id="catalog">
 		<div class="container">
 			<h2 class="catalog__title">Выберите идеальную колонку <span>JblArea!</span></h2>
 			<div class="catalog__wrapper">
@@ -165,42 +166,9 @@
 							<img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img">
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">2 990</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -257,7 +225,7 @@
 							<img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img">
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">2 990</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -315,7 +283,7 @@
 							<img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img">
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">2 990</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -373,7 +341,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">1 990</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -431,7 +399,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">1 990</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -489,7 +457,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 790</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -547,7 +515,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 390</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -604,7 +572,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 390</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -662,7 +630,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">1 690</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -720,7 +688,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">2 790</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -778,7 +746,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 690</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -836,7 +804,7 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 690</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
 
@@ -894,19 +862,9 @@
 							<!-- <img src="/img/icon_gift_powerbank.png" alt="" class="card-item__gift-img"> -->
 						</div>
 						<p class="card-item__price"><span class="card-item__price-item">4 690</span> руб.</p>
-						<a href="" class="card-item__buy-btn">Купить</a>
+						<div class="card-item__buy-btn">Купить</div>
 					</div>
 				</div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -915,7 +873,7 @@
 		</div>
 	</section>
 
-	<section class="promo promo--bottom">
+	<section class="promo promo--bottom" id="why_need">
 		<div class="container">
 			<p class="promo__title">Зачем нужны портативные колонки?</p>
 
@@ -957,7 +915,7 @@
 		</div>
 	</section>
 
-	<section class="infographic">
+	<section class="infographic" id="infographic">
 		<div class="container">
 			<h2 class="advantages__title">Преимущества беспроводных колонок</h2>
 
@@ -988,7 +946,7 @@
 	</section>
 
 
-	<section class="review__wrapper">
+	<section class="review__wrapper" id="review">
 		<div class="container">
 
 			<h2 class="review__title">Отзывы наших покупателей</h2>
@@ -1234,7 +1192,7 @@
 		</div>
 	</section>
 
-	<section class="delivery">
+	<section class="delivery" id="delivery">
 		<div class="container">
 			<h2 class="advantages__title">Оплата и доставка</h2>
 			<div class="delivery__block">
@@ -1297,10 +1255,11 @@
 
 			<img src="/img/offer_gift_powerbank.png" alt="" class="gift-offer__img">
 
-			<form action="" class="gift-offer__form gift-offer__form--white">
+			<form action="/php/send_request.php" method="POST" class="gift-offer__form gift-offer__form--white">
 				<p class="gift-offer__title">Заполните форму</p>
-				<input type="text" class="gift-offer__input gift-offer__input--white" placeholder="Ваше имя">
-				<input type="text" class="gift-offer__input gift-offer__input--white" placeholder="Ваш номер телефона">
+				<input type="text" name="yourName" class="gift-offer__input gift-offer__input--white" placeholder="Ваше имя">
+				<input type="tel" name="phoneNumber" class="gift-offer__input gift-offer__input--white phoneMask" placeholder="Ваш номер телефона">
+				<input type="hidden" name="sourceForm" value="Нижний разворот">
 				<input type="submit" class="gift-offer__submit gift-offer__submit--white" value="Купить колонку">
 			</form>
 
@@ -1318,8 +1277,8 @@
 
 			<div class="contact__block">
 				<div class="contact__item contact__item--phone">
-					<a href="#" class="contact__phone">8(800)500-62-57</a>
-					<a href="#" class="contact__phone">8(812)648-22-37</a>
+					<a href="tel:+78005006257" class="contact__phone">8(800)500-62-57</a>
+					<a href="tel:+78126482237" class="contact__phone">8(812)648-22-37</a>
 				</div>
 				<div class="contact__item contact__item--address">
 					<p class="contact__address">Санкт-Петербург<br> Лиговский пр. д.50 к.16 оф. 122<br> ст. метро пл. Восстания</p>
@@ -1330,12 +1289,13 @@
 			</div>
 
 			<div class="contact__block">
-				<form action="" class="contact__form">
+				<form action="/php/send_request.php" method="POST" class="contact__form">
 					<p class="contact__form-title">Остались вопросы?</p>
 					<p class="contact__form-text">Свяжитесь с нами</p>
-					<input type="text" class="contact__input" placeholder="Введите Ваше имя">
-					<input type="text" class="contact__input" placeholder="Введите Ваш E-mail">
-					<textarea name="" id="" cols="30" rows="10" class="contact__input contact__input--big" placeholder="Ваше сообщение"></textarea>
+					<input type="text" name="yourName" class="contact__input" placeholder="Введите Ваше имя">
+					<input type="text" name="user_mail" class="contact__input" placeholder="Введите Ваш E-mail">
+					<textarea name="" name="user_message" id="" cols="30" rows="10" class="contact__input contact__input--big" placeholder="Ваше сообщение"></textarea>
+					<input type="hidden" name="sourceForm" value="Форма в контактах">
 
 					<input type="submit" class="contact__btn" value="Отправить сообщение">
 				</form>
@@ -1348,6 +1308,23 @@
 			<p class="page-footer__text">JblArea.ru 2018© Все права защищены</p>
 		</div>
 	</footer>
+
+	<div class="popup__bgr"></div>
+
+	<div class="popup">
+		<p class="popup__title">Для покупки заполните поля</p>
+		<p class="popup__text">Менеджер свяжется с вами в течении<br> 10 минут для уточнения деталей заказа<br> (самовывоз или доставка на выбор)</p>
+
+		<form action="/php/send_request.php" method="POST" class="popup__form">
+			<input type="text" name="yourName" class="popup__input" placeholder="Ваше имя">
+			<input type="tel" name="phoneNumber" class="popup__input phoneMask" placeholder="Ваш номер телефона">
+			<input type="hidden" id="model" name="model">
+			<input type="hidden" name="sourceForm" value="Форма из каталога">
+			<input type="submit" class="popup__btn">
+		</form>
+
+		<span class="popup__close">X</span>
+	</div>
 
 
 	<script src="/js/script.min.js"></script>

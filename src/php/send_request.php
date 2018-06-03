@@ -9,7 +9,7 @@ if (isset($_POST["user_message"])) { $user_message = str_replace(" ",'', $_POST[
 
 $previous_page = $_SERVER["HTTP_REFERER"];
 /* Дубль на почту */
-$mail_to = "syd.phoenix@gmail.com"; //alexeykonoplev2@yandex.ru
+$mail_to = "alexeykonoplev2@yandex.ru"; //alexeykonoplev2@yandex.ru
 $mail_from = "Jblarea.ru";
 $mail_body = "Модель: " . $model . "\n" .
 			"Имя клиента: " . $customer_name . "\n" .

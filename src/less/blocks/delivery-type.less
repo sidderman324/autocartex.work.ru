@@ -9,23 +9,47 @@
 		height: 130px;
 		margin-bottom: 20px;
 		position: relative;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			height: 60px;
+		}
 	}
 	&__img {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%);
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			height: 100%;
+			width: auto;
+		}
 	}
 	&__title {
 		font-size: 21px;
 		color: @black-color;
 		font-weight: 500;
 		margin-bottom: 10px;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 16px;
+		}
 	}
 	&__text {
 		width: 60%;
 		margin: 0 auto;
 		text-align: left;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			width: 80%;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			width: 90%;
+			font-size: 14px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 12px;
+			width: 90%;
+		}
 
 		&--margined {
 			margin-bottom: 15px;

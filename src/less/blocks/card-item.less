@@ -7,6 +7,15 @@
 	padding: 30px 0;
 	border-top: 1px solid @gray-color;
 
+	@media(min-width: @screen-sm) and (max-width: @screen-md) {
+		flex-direction: column;
+		padding: 10px 0;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+		flex-direction: column;
+		padding: 10px 0;
+	}
+
 	&__gallery {
 		width: 405px;
 		height: 350px;
@@ -14,31 +23,73 @@
 		display: inline-block;
 		// overflow: hidden;
 		// position: relative;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			margin: 0 75px;
+			width: 355px;
+			height: 290px;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			margin: 0 auto;
+			width: 355px;
+			height: 290px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 100%;
+			height: auto;
+			padding: 0 20px;
+			margin: 0;
+		}
 	}
 	&__gallery-item {
 		width: 400px;
 		height: 340px;
 		display: inline-block;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			width: 355px;
+			height: auto;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			width: 355px;
+			height: auto;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 100%;
+			height: auto;
+		}
 	}
 	.slick-arrow {
 		font-size: 0;
 		background-color: transparent;
 		border: 0;
-		
 		display: inline-block;
-		width: 30px;
-		height: 58px;
+		width: 20px;
+		height: 38px;
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
+		transition: 0.3s;
+		opacity: 1;
+
+		&:hover {
+			opacity: 0.5;
+			transition: 0.3s;
+		}
 	}
 	.slick-next {
 		background-image: url('/img/icon_arrow_gallery_next.png');
 		right: -50px;
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			right: -20px;
+		}
 	}
 	.slick-prev {
 		background-image: url('/img/icon_arrow_gallery.png');
 		left: -50px;
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			left: -20px;
+		}
 	}
 	.slick-prev:before, .slick-next:before {
 		display: none;
@@ -68,6 +119,14 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			width: 100%;
+			padding-top: 30px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 100%;
+		}
 	}
 	&__title {
 		font-size: 30px;
@@ -75,6 +134,10 @@
 		font-weight: 500;
 		margin-right: auto;
 		text-transform: uppercase;
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 22px;
+			width: 100%;
+		}
 	}
 	&__short-description {
 		font-size: 16px;
@@ -86,13 +149,40 @@
 		border-bottom: 1px dotted @gray-color;
 		display: block;
 		width: 100%;
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 14px;
+		}
 	}
 	&__description {
 		font-size: 14px;
 		color: @gray-color;
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 12px;
+			text-align: justify;
+		}
 	}
 	&__list {
-		padding-left: 18px;
+		// padding-left: 18px;
+		margin-top: 10px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		padding-left: 22px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			background-color: @black-color;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 	&__features {
 		font-size: 14px;
@@ -106,6 +196,13 @@
 		}
 		&:last-of-type {
 			width: 200px;
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				width: 160px;
+			}
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 12px;
+			width: 130px;
 		}
 	}
 	&__gift-img-wrapper {
@@ -113,6 +210,14 @@
 		height: 150px;
 		position: relative;
 		margin-left: auto;
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			order: 3;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 100px;
+			height: 100px;
+			order: 3;
+		}
 	}
 	&__gift-img {
 		width: 100%;
@@ -127,6 +232,17 @@
 		color: @green-color;
 		font-size: 27px;
 		font-weight: 400;
+		white-space: nowrap;
+		margin-top: -50px;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			margin-right: 40px;
+			margin-left: 10px;
+			margin-top: -18px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			margin-top: -50px;
+		}
 	}
 	&__price-item {
 		font-size: 36px;
@@ -146,6 +262,28 @@
 		font-size: 22px;
 		margin-left: 40px;
 		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: #34a766;
+			transition: 0.3s;
+		}
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			order: 4;
+			margin-left: 0;
+			margin-right: 60px;
+			margin-top: -60px;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			margin-top: -10px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			order: 4;
+			margin-left: 0;
+			margin-top: -40px;
+			margin-bottom: 10px;
+		}
 	}
 
 }

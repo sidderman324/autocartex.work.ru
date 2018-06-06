@@ -13,6 +13,13 @@
 	justify-content: center;
 	flex-wrap: wrap;
 
+	@media(min-width: @screen-md) and (max-width: @screen-lg) {
+		margin: 0 10px;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+
+	}
+
 	&__title {
 		font-size: 38px;
 		color: #fff;
@@ -35,19 +42,32 @@
 			background-color: transparent;
 			border: 0;
 			display: inline-block;
-			width: 30px;
-			height: 58px;
+			width: 20px;
+			height: 38px;
 			background-size: contain;
 			background-repeat: no-repeat;
 			position: absolute;
+			transition: 0.3s;
+			opacity: 1;
+
+			&:hover {
+				opacity: 0.5;
+				transition: 0.3s;
+			}
 		}
 		.slick-next {
 			background-image: url('/img/icon_arrow_gallery_next.png');
-			right: -50px;
+			right: 0px;
+			@media(min-width: @screen-md) and (max-width: @screen-lg) {
+				right: 30px;
+			}
 		}
 		.slick-prev {
 			background-image: url('/img/icon_arrow_gallery.png');
-			left: -50px;
+			left: 0px;
+			@media(min-width: @screen-md) and (max-width: @screen-lg) {
+				left: 30px;
+			}
 		}
 		.slick-prev:before, .slick-next:before {
 			display: none;
@@ -72,16 +92,30 @@
 			padding: 0 100px;
 			bottom: -70px;
 			left: 0;
+
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				padding: 0 10px;
+			}
 		}
 	}
 	&__card-wrapper {
 		padding: 0 100px;
 		padding-top: 50px;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			padding: 0 10px;
+			padding-top: 25px;
+		}
 	}
 	&__img-wrapper {
 		width: 110px;
 		height: 110px;
 		position: relative;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			width: 90px;
+			height: 90px;
+		}
 	}
 	&__img {
 		position: absolute;
@@ -94,7 +128,10 @@
 	&__info {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			height: 115px;
+		}
 
 		span {
 			padding-left: 10px;

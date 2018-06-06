@@ -9,9 +9,29 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			padding: 25px 50px;
+		}
+		&:last-of-type {
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				flex-direction: column;
+			}
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			padding: 25px 0;
+			flex-direction: column;
+		}
 	}
 	&__img {
 		margin-right: 100px;
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			margin-right: 50px;
+			width: 50%;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			margin-right: 0;
+			width: 100%;
+		}
 	}
 	&__billit-text {
 		font-size: 21px;
@@ -20,10 +40,23 @@
 		padding-left: 80px;
 		margin-bottom: 60px;
 
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			padding-left: 0;
+			padding-top: 50px;
+			text-align: center;
+			font-size: 14px;
+			width: 50%;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+
 		&--normal {
 			font-weight: 400;
 			padding-left: 0;
 			font-size: 16px;
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				font-size: 14px;
+			}
 		}
 		&:before {
 			content: '';
@@ -35,6 +68,17 @@
 			background-size: contain;
 			left: 0;
 			top: -10px;
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				width: 40px;
+				height: 40px;
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				width: 40px;
+				height: 40px;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 		&--delivery-bw:before {
 			background-image: url('/img/icon_delivery_bw.png');
@@ -52,10 +96,31 @@
 
 		&--left {
 			width: 50%;
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				width: 100%;
+			}
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 28px;
+			font-weight: 400;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 20px;
+			font-weight: 400;
 		}
 	}
 	&__icon-wrapper {
 		width: 50%;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			width: 100%;
+			margin-top: 25px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			flex-direction: row;
+			display: flex;
+			width: 100%;
+		}
 	}
 	&__types {
 		display: flex;
@@ -64,6 +129,9 @@
 		padding: 50px 0;
 		margin-bottom: 50px;
 		position: relative;
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			padding: 25px 0;
+		}
 
 		&:after {
 			content: '';
@@ -85,6 +153,16 @@
 		padding-left: 80px;
 		margin-bottom: 30px;
 
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 18px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 16px;
+			padding-left: 0;
+			padding-top: 60px;
+			text-align: center;
+		}
+
 		&:before {
 			content: '';
 			display: inline-block;
@@ -95,6 +173,17 @@
 			background-size: contain;
 			left: 0;
 			top: 0;
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				width: 50px;
+				height: 50px;
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				width: 50px;
+				height: 50px;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 		&--credit:before {
 			background-image: url('/img/icon_credit_card_bw.png');

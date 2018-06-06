@@ -8,6 +8,31 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+
+		&--bottom {
+			.header-phone {
+				display: none;
+				@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+					display: flex;
+				}
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				flex-direction: column;
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				display: none;
+			}
+		}
+		&--top {
+			.header-phone {
+				@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+					display: none;
+				}
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				flex-wrap: nowrap;
+			}
+		}
 	}
   
 }

@@ -7,6 +7,7 @@
 	<title>JblArea.ru - продажа беспроводных акустических систем по всей России</title>
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
 
@@ -22,8 +23,13 @@
 					<a href="tel:+78005006257" class="header-phone__item">8(800)500-62-57</a>
 					<a href="#promo_top" class="header-phone__text">Заказать звонок</a>
 				</div>
+
+				<div class="burger__wrapper">
+					<div class="burger"></div>
+				</div>
 			</div>
-			<div class="page-header__box">
+
+			<div class="page-header__box page-header__box--bottom">
 				<ul class="main-menu">
 					<li class="main-menu__item"><a href="/" class="main-menu__link">Главная</a></li>
 					<li class="main-menu__item"><a href="#catalog" class="main-menu__link">Каталог</a></li>
@@ -32,6 +38,10 @@
 					<li class="main-menu__item"><a href="#review" class="main-menu__link">Отзывы</a></li>
 					<li class="main-menu__item"><a href="#delivery" class="main-menu__link">Доставка</a></li>
 				</ul>
+				<div class="header-phone">
+					<a href="tel:+78005006257" class="header-phone__item">8(800)500-62-57</a>
+					<a href="#promo_top" class="header-phone__text">Заказать звонок</a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -39,30 +49,32 @@
 	<section class="promo" id="promo_top">
 		<div class="container">
 			<div class="promo__box">
-				<p class="promo__title">Беспроводные колонки от <span>1 190 руб!</span></p>
+				<p class="promo__title">Беспроводные колонки <br>от 1 190 руб!</p>
 				<div class="promo__img-wrapper">
 					<img src="/img/image_charge3.png" alt="" class="promo__img">
 				</div>
 				<ul class="promo__list">
-					<li class="promo__item">Можно брать куда угодно - любимая музыка всегда будет с Вами!</li>
-					<li class="promo__item">Станет отличным подарком по любому поводу.</li>
-					<li class="promo__item">Приятная цена - доступно каждому!</li>
+					<li class="promo__item promo__item--hike">Можно брать куда угодно - любимая музыка всегда будет с Вами!</li>
+					<li class="promo__item promo__item--gift">Станет отличным подарком по любому поводу.</li>
+					<li class="promo__item promo__item--lower_price">Приятная цена - доступно каждому!</li>
 				</ul>
 			</div>
 			<div class="gift-offer">
 				<p class="gift-offer__title">Powerbank в подарок!</p>
 
-				<div class="gift-offer__wrapper">
-					<p class="gift-offer__text">При покупке динамика <br>
-						<span class="gift-offer__text gift-offer__text--big-under">JBL CHARGE 3</span>
-					</p>
-					<p class="gift-offer__text gift-offer__text--big gift-offer__text--margined">за <span class="gift-offer__text--big-green">2 990</span> руб.</p>
-				</div>
-				<div class="gift-offer__img-wrapper">
-					<img src="/img/charge3_powerbank.png" alt="" class="gift-offer__img">
-				</div>
-				<div class="gift-offer__wrapper">
-					<p class="gift-offer__text gift-offer__text--bold"><span class="gift-offer__text--big">+ПОДАРОК!</span><br> Зарядное устройство <span class="gift-offer__text--big">Remax Mini</span></p>
+				<div class="gift-offer__box">
+					<div class="gift-offer__wrapper">
+						<p class="gift-offer__text">При покупке колонки <br>
+							<span class="gift-offer__text gift-offer__text--big-under">JBL CHARGE 3</span>
+						</p>
+						<p class="gift-offer__text gift-offer__text--big gift-offer__text--margined">за <span class="gift-offer__text--big-green">2 990</span> руб.</p>
+					</div>
+					<div class="gift-offer__img-wrapper">
+						<img src="/img/charge3_powerbank.png" alt="" class="gift-offer__img">
+					</div>
+					<div class="gift-offer__wrapper">
+						<p class="gift-offer__text gift-offer__text--bold"><span class="gift-offer__text--big">+ПОДАРОК!</span><br> Зарядное устройство <span class="gift-offer__text--big">Remax Mini</span></p>
+					</div>
 				</div>
 
 				<form action="/php/send_request.php" method="POST" class="gift-offer__form">
@@ -875,12 +887,11 @@
 
 	<section class="promo promo--bottom" id="why_need">
 		<div class="container">
-			<p class="promo__title">Зачем нужны портативные колонки?</p>
+			<p class="promo__title promo__title--small">Зачем нужны портативные колонки?</p>
 
 			<div class="promo__video-wrapper">
-				<div class="promo__video" onclick="jQuery(this).replaceWith('<iframe class=\'overview_new video-overview\' src=\'https://www.youtube.com/embed/?autoplay=1&amp;rel=0\' frameborder=\'0\' allowfullscreen></iframe>')">
-					<img class="promo__video-img" src="https://img.youtube.com/vi/nHg5dEoNucs/0.jpg">
-					<img class="promo__video-btn" src="https://sgholding.copterdrone.ru/images/1.png">
+				<div class="promo__video">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/nHg5dEoNucs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 
@@ -1040,7 +1051,84 @@
 							<img src="/img/review_eduard.png" alt="" class="review__img">
 						</div>
 						<span>
-							<p class="review__name">Эдуард</p>
+							<p class="review__name">Эльдар</p>
+							<p class="review__text">Казань</p>
+							<p class="review__text">Оценка</p>
+							<div class="review__rating">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_half.png" alt="" class="review__rating-item">
+							</div>
+						</span>
+					</div>
+
+					<div class="review__bq">
+						<p class="review__bq-title">Отзыв</p>
+						<p class="review__bq-text">Давно мечтал о колонке, чтобы слушать музыку в гараже. Теперь есть такая возможность - очень удобно</p>
+					</div>
+
+				</div>
+
+				<div class="review">
+					<div class="review__info">
+						<div class="review__img-wrapper">
+							<img src="/img/review_egor.png" alt="" class="review__img">
+						</div>
+						<span>
+							<p class="review__name">Афтандил</p>
+							<p class="review__text">Нальчик</p>
+							<p class="review__text">Оценка</p>
+							<div class="review__rating">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_half.png" alt="" class="review__rating-item">
+							</div>
+						</span>
+					</div>
+
+					<div class="review__bq">
+						<p class="review__bq-title">Отзыв</p>
+						<p class="review__bq-text">Калонка купил хороший. Друг хотел тоже такой говорю ему тут брал. Доставляли около недели, но от души привезли</p>
+					</div>
+
+				</div>
+
+				<div class="review">
+					<div class="review__info">
+						<div class="review__img-wrapper">
+							<img src="/img/review_vlada.png" alt="" class="review__img">
+						</div>
+						<span>
+							<p class="review__name">Александа</p>
+							<p class="review__text">Краснодар</p>
+							<p class="review__text">Оценка</p>
+							<div class="review__rating">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_full.png" alt="" class="review__rating-item">
+								<img src="/img/star_half.png" alt="" class="review__rating-item">
+							</div>
+						</span>
+					</div>
+
+					<div class="review__bq">
+						<p class="review__bq-title">Отзыв</p>
+						<p class="review__bq-text">Купили JBL CHARGE 3 RED, колонка классная, очень хороший звук и яркий корпус. Насчет водонепроницаемости я конечно сомневаюсь, но не испытавала еще</p>
+					</div>
+				</div>
+
+				<div class="review">
+					<div class="review__info">
+						<div class="review__img-wrapper">
+							<img src="/img/review_ksenia.png" alt="" class="review__img">
+						</div>
+						<span>
+							<p class="review__name">Саша</p>
 							<p class="review__text">Санкт-Петербург</p>
 							<p class="review__text">Оценка</p>
 							<div class="review__rating">
@@ -1055,7 +1143,7 @@
 
 					<div class="review__bq">
 						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">JBL Clip 2. Очень компактные размеры, удобное крепление и отличный звук. <br>Водонепроницаемость тут тоже очень к месту, все продумано.</p>
+						<p class="review__bq-text">Мне давно интересовала JBL PULSE 3 BLACK, наконец-то дошли руки ее купить - очень красиво освещает комнату - не только колонека, но и предмет интерьера!</p>
 					</div>
 
 				</div>
@@ -1063,11 +1151,11 @@
 				<div class="review">
 					<div class="review__info">
 						<div class="review__img-wrapper">
-							<img src="/img/review_egor.png" alt="" class="review__img">
+							<img src="/img/review_noname.png" alt="" class="review__img">
 						</div>
 						<span>
-							<p class="review__name">Егор</p>
-							<p class="review__text">Москва</p>
+							<p class="review__name">Кристина</p>
+							<p class="review__text">Ангарск</p>
 							<p class="review__text">Оценка</p>
 							<div class="review__rating">
 								<img src="/img/star_full.png" alt="" class="review__rating-item">
@@ -1081,7 +1169,7 @@
 
 					<div class="review__bq">
 						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">Спасибо за быструю доставку, колонка просто огонь! Отличные басы и мощность, все супер! Очень доволен покупкой в этом магазине!</p>
+						<p class="review__bq-text">Колонку доставили на удивление быстро, забрала на почте, все в порядке</p>
 					</div>
 
 				</div>
@@ -1089,11 +1177,11 @@
 				<div class="review">
 					<div class="review__info">
 						<div class="review__img-wrapper">
-							<img src="/img/review_veronika.png" alt="" class="review__img">
+							<img src="/img/review_kirill.png" alt="" class="review__img">
 						</div>
 						<span>
-							<p class="review__name">Вероника</p>
-							<p class="review__text">Архангельск</p>
+							<p class="review__name">Анна</p>
+							<p class="review__text">Екат</p>
 							<p class="review__text">Оценка</p>
 							<div class="review__rating">
 								<img src="/img/star_full.png" alt="" class="review__rating-item">
@@ -1107,84 +1195,7 @@
 
 					<div class="review__bq">
 						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">Спасибо, колонка отличная - и звук крутой, и функционал, и корпус с защитой от брызг. Очень довольна покупкой))</p>
-					</div>
-				</div>
-
-				<div class="review">
-					<div class="review__info">
-						<div class="review__img-wrapper">
-							<img src="/img/review_eduard.png" alt="" class="review__img">
-						</div>
-						<span>
-							<p class="review__name">Эдуард</p>
-							<p class="review__text">Санкт-Петербург</p>
-							<p class="review__text">Оценка</p>
-							<div class="review__rating">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_half.png" alt="" class="review__rating-item">
-							</div>
-						</span>
-					</div>
-
-					<div class="review__bq">
-						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">JBL Clip 2. Очень компактные размеры, удобное крепление и отличный звук. <br>Водонепроницаемость тут тоже очень к месту, все продумано.</p>
-					</div>
-
-				</div>
-
-				<div class="review">
-					<div class="review__info">
-						<div class="review__img-wrapper">
-							<img src="/img/review_egor.png" alt="" class="review__img">
-						</div>
-						<span>
-							<p class="review__name">Егор</p>
-							<p class="review__text">Москва</p>
-							<p class="review__text">Оценка</p>
-							<div class="review__rating">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_half.png" alt="" class="review__rating-item">
-							</div>
-						</span>
-					</div>
-
-					<div class="review__bq">
-						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">Спасибо за быструю доставку, колонка просто огонь! Отличные басы и мощность, все супер! Очень доволен покупкой в этом магазине!</p>
-					</div>
-
-				</div>
-
-				<div class="review">
-					<div class="review__info">
-						<div class="review__img-wrapper">
-							<img src="/img/review_veronika.png" alt="" class="review__img">
-						</div>
-						<span>
-							<p class="review__name">Вероника</p>
-							<p class="review__text">Архангельск</p>
-							<p class="review__text">Оценка</p>
-							<div class="review__rating">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_full.png" alt="" class="review__rating-item">
-								<img src="/img/star_half.png" alt="" class="review__rating-item">
-							</div>
-						</span>
-					</div>
-
-					<div class="review__bq">
-						<p class="review__bq-title">Отзыв</p>
-						<p class="review__bq-text">Спасибо, колонка отличная - и звук крутой, и функционал, и корпус с защитой от брызг. Очень довольна покупкой))</p>
+						<p class="review__bq-text">Купила в подарок своему парню, еще не распаковывала, но очень любопытно, как звучит. Консультанты все грамотно рассказали, спасибо</p>
 					</div>
 				</div>
 
@@ -1210,7 +1221,7 @@
 					</div>
 					<p class="delivery-type__title">Самовывоз</p>
 					<p class="delivery-type__text delivery-type__text--margined">Закажите колонку и заберите его в день заказа!</p>
-					<p class="delivery-type__text">Адрес магазина: <br>СПб, Лиговский пр. д.50 к.16 оф. 122 (ст. метро пл. Восстания)	</p>
+					<p class="delivery-type__text">Адрес магазина: <br>СПб, Лиговский пр. д.50 к.13 оф. 54 (ст. метро пл. Восстания)	</p>
 				</div>
 				<div class="delivery-type">
 					<div class="delivery-type__img-wrapper">
@@ -1281,10 +1292,10 @@
 					<a href="tel:+78126482237" class="contact__phone">8(812)648-22-37</a>
 				</div>
 				<div class="contact__item contact__item--address">
-					<p class="contact__address">Санкт-Петербург<br> Лиговский пр. д.50 к.16 оф. 122<br> ст. метро пл. Восстания</p>
+					<p class="contact__address">Санкт-Петербург<br> Лиговский пр. д.50 к.13 оф. 54<br> ст. метро пл. Восстания</p>
 				</div>
 				<div class="contact__item contact__item--address">
-					<p class="contact__address">Москва<br> Лиговский пр. д.50 к.16 оф. 122 <br> ст. метро пл. Восстания</p>
+					<p class="contact__address">Москва<br> 4-й Вятский пер. д 4<br> ст. метро Дмитровская</p>
 				</div>
 			</div>
 

@@ -7,10 +7,23 @@
 	height: 555px;
 	background-image: url('/img/contact_bgr.png');
 
+	@media(min-width: @screen-sm) and (max-width: @screen-md) {
+		padding: 20px 0;
+		height: auto;
+	}
+	@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+		padding: 20px 0;
+		height: auto;
+	}
+
 	.container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			flex-direction: column;
+		}
 	}
 	&__title {
 		font-size: 38px;
@@ -18,15 +31,32 @@
 		width: 100%;
 		text-align: center;
 		font-weight: 500;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 28px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 22px;
+		}
 	}
 	&__block {
 		width: 50%;
 		padding-top: 40px;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 100%;
+			padding-top: 20px;
+		}
 	}
 	&__item {
 		padding-left: 80px;
 		position: relative;
 		margin-bottom: 40px;
+
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			padding-left: 50px;
+			margin-bottom: 20px;
+		}
 
 		&:before {
 			content: '';
@@ -38,6 +68,17 @@
 			position: absolute;
 			left: 0;
 			top: 15px;
+
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				width: 45px;
+				height: 45px;
+				top: 5px;
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				width: 40px;
+				height: 40px;
+				top: 0;
+			}
 		}
 
 		&--phone:before {
@@ -56,11 +97,31 @@
 		width: 100%;
 		display: inline-block;
 		text-decoration: none;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			font-size: 35px;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 22px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 16px;
+		}
 	}
 	&__address {
 		font-size: 28px;
 		color: #fff;
 		font-weight: 400;
+
+		@media(min-width: @screen-md) and (max-width: @screen-lg) {
+			font-size: 25px;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 18px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 16px;
+		}
 	}
 
 	&__form {
@@ -72,12 +133,25 @@
 		font-size: 38px;
 		color: #fff;
 		text-align: center;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 28px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 22px;
+		}
 	}
 	&__form-text {
 		font-size: 28px;
 		color: #fff;
 		text-align: center;
 		margin-bottom: 20px;
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 24px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 18px;
+		}
 	}
 	&__input {
 		background-color: #fff;
@@ -93,8 +167,23 @@
 		border: 1px solid @black-color;
 		border-radius: 5px;
 
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			width: 90%;
+			height: 35px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			width: 75%;
+			height: 30px;
+		}
+
 		&--big {
 			height: 90px;
+			@media(min-width: @screen-sm) and (max-width: @screen-md) {
+				height: 70px;
+			}
+			@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+				height: 60px;
+			}
 		}
 	}
 	&__btn {
@@ -109,6 +198,20 @@
 		margin-left: auto;
 		margin-top: 40px;
 		margin-right: 90px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: #34a766;
+			transition: 0.3s;
+		}
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			margin-top: 20px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			margin: 0;
+			margin-top: 20px;
+		}
 	}
 
 }

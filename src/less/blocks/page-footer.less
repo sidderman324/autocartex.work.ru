@@ -7,5 +7,12 @@
 	&__text {
 		font-size: 16px;
 		color: @black-color;
+
+		@media(min-width: @screen-sm) and (max-width: @screen-md) {
+			font-size: 14px;
+		}
+		@media (min-width: @screen-xs) and (max-width: @screen-sm) {
+			font-size: 12px;
+		}
 	}
 }
